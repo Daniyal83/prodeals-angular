@@ -13,6 +13,7 @@ import { SavingComponent } from './saving/saving.component';
 import { LeftBlockComponent } from './left-block/left-block.component';
 import { RightBlockComponent } from './right-block/right-block.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrandsComponent } from './components/filters/brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     SavingComponent,
     LeftBlockComponent,
     RightBlockComponent,
-    FooterComponent
+    FooterComponent,
+    BrandsComponent
   ],
   imports: [
     BrowserModule,

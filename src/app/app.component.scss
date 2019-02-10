@@ -13,6 +13,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .inner {
     display: flex;
@@ -20,6 +21,7 @@
     box-sizing: border-box;
     background-color: #FFF;
     padding: 20px 10px;
+    flex: 1;
     &__left-block, &__right-block {
         width: 20%;
     }
