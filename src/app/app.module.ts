@@ -14,6 +14,8 @@ import { LeftBlockComponent } from './left-block/left-block.component';
 import { RightBlockComponent } from './right-block/right-block.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrandsComponent } from './components/filters/brands/brands.component';
+import { ProductComponent } from './components/product/product.component';
+import { SpecialComponent } from './components/special/special.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BrandsComponent } from './components/filters/brands/brands.component';
     LeftBlockComponent,
     RightBlockComponent,
     FooterComponent,
-    BrandsComponent
+    BrandsComponent,
+    ProductComponent,
+    SpecialComponent
   ],
   imports: [
     BrowserModule,
