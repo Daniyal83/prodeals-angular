@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrandsComponent } from './components/filters/brands/brands.component';
 import { ProductComponent } from './components/product/product.component';
 import { SpecialComponent } from './components/special/special.component';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SpecialComponent } from './components/special/special.component';
     FooterComponent,
     BrandsComponent,
     ProductComponent,
-    SpecialComponent
+    SpecialComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
