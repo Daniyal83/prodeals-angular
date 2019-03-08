@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +17,7 @@ import { BrandsComponent } from './components/filters/brands/brands.component';
 import { ProductComponent } from './components/product/product.component';
 import { SpecialComponent } from './components/special/special.component';
 import { TitleComponent } from './components/title/title.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,12 @@ import { TitleComponent } from './components/title/title.component';
     BrandsComponent,
     ProductComponent,
     SpecialComponent,
-    TitleComponent
+    TitleComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

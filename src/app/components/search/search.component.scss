@@ -1,0 +1,16 @@
+.search {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    &__text {
+        box-sizing: border-box;
+        padding: 5px;
+        outline-color: #109ACA; 
+        border: 1px solid #bebebe;
+    }
+    &__btn {
+        color: #525252;
+        padding: 4px;
+    }
+} 
