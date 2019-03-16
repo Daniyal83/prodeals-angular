@@ -1,3 +1,6 @@
-<p>
-  about works!
-</p>
+<div class="about">
+  <h2 class="about__title"> Search result</h2>
+  <li class="about__item" *ngFor="let prod of products | async">
+    {{ prod.title }}, {{ prod.price}}, {{ prod.ram }}, {{ prod.rom }}    
+  </li>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
+import { Store } from '@ngrx/store';
+import * as ProductStore from '../../store';
 
 @Component({
   selector: 'app-search',
@@ -8,13 +10,17 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 export class SearchComponent implements OnInit, DoCheck {
   searchValue: string = "";
 
-  constructor() { }
+  constructor(private store: Store<ProductStore.state>) { }
+
+  search() {
+    console.log('submited');
+    this.store.dispatch(new ProductStore.SearchProduct(this.searchValue));
+  } 
 
   ngOnInit() {
   }
 
   ngDoCheck() {
-    // console.log(this.searchValue);
   }
 
 }

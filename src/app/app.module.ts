@@ -18,6 +18,8 @@ import { ProductComponent } from './components/product/product.component';
 import { SpecialComponent } from './components/special/special.component';
 import { TitleComponent } from './components/title/title.component';
 import { SearchComponent } from './components/search/search.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './store';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { SearchComponent } from './components/search/search.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({product: reducers.product})
   ],
   providers: [],
   bootstrap: [AppComponent]
