@@ -20,6 +20,9 @@ import { TitleComponent } from './components/title/title.component';
 import { SearchComponent } from './components/search/search.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store';
+import { SearchResultComponent } from './components/search-result/search-result.component';
+import { WelcomeComponent } from './components/home/welcome/welcome.component';
+import { HomeComponent } from './components/home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { reducers } from './store';
     ProductComponent,
     SpecialComponent,
     TitleComponent,
-    SearchComponent
+    SearchComponent,
+    SearchResultComponent,
+    WelcomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

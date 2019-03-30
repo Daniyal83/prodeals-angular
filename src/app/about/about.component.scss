@@ -1,0 +1,13 @@
+@import "../../assets/styles/colors.scss";
+
+.about {
+    color: $gray;
+    &__goal, &__placement {
+        text-indent: 20px;
+        margin: 20px 0;
+        line-height: 1.3;
+    }
+    &__title, &__wish {
+        text-align: center;
+    }
+}

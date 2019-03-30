@@ -1,0 +1,6 @@
+<div class="search-result">
+  <h2 class="search-result__title"> Search result</h2>
+  <li class="search-result__item" *ngFor="let prod of products | async">
+    {{ prod.title }}, {{ prod.price}}, {{ prod.ram }}, {{ prod.rom }}    
+  </li>
+</div>

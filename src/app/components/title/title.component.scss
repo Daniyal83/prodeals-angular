@@ -1,13 +1,15 @@
+@import "assets/styles/colors.scss";
+
 .title {
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DFDFDF;
+    background-color: $medi-gray;
     border-radius: 10px;
-    border: 1px solid rgb(175, 175, 175);
-    color: #109ACA;
+    border: 1px solid $medi-gray;
+    color: $azure;
     font-size: 20px;
     font-weight: 600;
-    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 5px $white;
 }
