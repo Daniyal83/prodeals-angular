@@ -1,0 +1,10 @@
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    &__buttons {
+        margin: 5px 0 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+}

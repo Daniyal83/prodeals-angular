@@ -23,6 +23,8 @@ import { reducers } from './store';
 import { SearchResultComponent } from './components/search-result/search-result.component';
 import { WelcomeComponent } from './components/home/welcome/welcome.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { OffersComponent } from './components/home/offers/offers.component';
+import { ButtonComponent } from './components/buttons/button/button.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { HomeComponent } from './components/home/home/home.component';
     SearchComponent,
     SearchResultComponent,
     WelcomeComponent,
-    HomeComponent
+    HomeComponent,
+    OffersComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

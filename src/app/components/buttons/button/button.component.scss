@@ -1,0 +1,19 @@
+@import "assets/styles/colors.scss";
+
+.button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid $gray;
+    color: $azure;
+    background-color: $light-gray;
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s all;
+    &:active {
+        box-shadow: 0 0 5px $gray;
+        transform: scale(0.97);
+    }
+    &:hover {
+        color: $navi;
+    }
+}

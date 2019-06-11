@@ -4,12 +4,14 @@ import { Product } from '../../models/Product';
 
 export interface ProductState {
     products: Product[],
-    searchResult: Product[]
+    searchResult: Product[],
+    brandFilter: string
 }
 
 export const initialState: ProductState = {
     products: PRODUCTS,
-    searchResult: []
+    searchResult: [],
+    brandFilter: ''
 } 
 
 export function reducer(state = initialState, action: ProductActions.ProductActions): ProductState {
@@ -22,6 +24,9 @@ export function reducer(state = initialState, action: ProductActions.ProductActi
             const searchValue = action.payload.toLowerCase();
             const searchResult = state.products.filter(item => item.brand.indexOf(searchValue) !== -1);
             return {...state, searchResult};
+        case ProductActions.SET_BRANDFILTER:
+            const brandFilter = action.payload.toLowerCase();
+            return {...state, brandFilter}
         default:
             return state;
     }
@@ -29,3 +34,4 @@ export function reducer(state = initialState, action: ProductActions.ProductActi
 
 export const getProducts = (state: ProductState) => state.products;
 export const getSearchResult = (state: ProductState) => state.searchResult;
+export const getBrandFilter = (state: ProductState) => state.brandFilter;

@@ -8,4 +8,5 @@ export class Product {
     special: boolean;
     ram?: string;
     rom?: string;
+    href?: string;
 }

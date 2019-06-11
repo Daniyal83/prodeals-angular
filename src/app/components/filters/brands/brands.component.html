@@ -1,6 +1,6 @@
 <div class="brands">
   <app-title title="Brands"></app-title>
-  <li class="brands__item" *ngFor="let brand of brands"> 
+  <li class="brands__item" *ngFor="let brand of brands" (click)="setBrandFilter(brand.name)"> 
     {{ brand.name }}
   </li>
 </div>

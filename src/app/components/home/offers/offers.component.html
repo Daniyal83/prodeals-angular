@@ -1,0 +1,9 @@
+<div class="offers">
+    <div class="offers__item" *ngFor="let product of products">
+        <app-product [product]="product"></app-product>
+        <div class="offers__buttons">
+            <app-button [buttonValue]="'Details'" (clicked)="showDetails($event)"></app-button>
+            <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event)"></app-button>
+        </div>
+    </div>
+</div>

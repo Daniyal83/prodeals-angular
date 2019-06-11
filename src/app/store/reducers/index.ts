@@ -13,3 +13,4 @@ export const selectProductState = createFeatureSelector("product");
 
 export const getProductStateProducts = createSelector(selectProductState, ProductReducer.getProducts);
 export const getProductStateSearchResult = createSelector(selectProductState, ProductReducer.getSearchResult);
+export const getProductStateBrandFilter = createSelector(selectProductState, ProductReducer.getBrandFilter);

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'contacts', component: ContactsComponent},
   {path: 'saving', component: SavingComponent},
   {path: 'search-result', component: SearchResultComponent},
-  { path: '**', component: MainInfoComponent }
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({
