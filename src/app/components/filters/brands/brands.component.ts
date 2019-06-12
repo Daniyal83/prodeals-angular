@@ -19,6 +19,7 @@ export class BrandsComponent implements OnInit {
 
     ngOnInit() {
         this.brands = [
+        {id: 0, name: "All"},
         {id: 1, name: "Xiaomi"},
         {id: 2, name: "Meizu"},
         {id: 3, name: "Lenovo"},

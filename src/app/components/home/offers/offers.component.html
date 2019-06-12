@@ -1,5 +1,5 @@
 <div class="offers">
-    <div class="offers__item" *ngFor="let product of products">
+    <div class="offers__item" *ngFor="let product of products" [@fadeIn]="isReady ? 'show' : 'hide'">
         <app-product [product]="product"></app-product>
         <div class="offers__buttons">
             <app-button [buttonValue]="'Details'" (clicked)="showDetails($event)"></app-button>
