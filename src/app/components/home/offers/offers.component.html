@@ -6,4 +6,7 @@
             <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event)"></app-button>
         </div>
     </div>
+    <div class="offers__empty" *ngIf="products && !products.length">
+        Currently there are no products of chosen brand presented on our service.
+    </div>
 </div>

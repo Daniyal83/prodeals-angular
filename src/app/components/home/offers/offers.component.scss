@@ -1,3 +1,5 @@
+@import "assets/styles/colors.scss";
+
 .offers {
     display: flex;
     flex-wrap: wrap;
@@ -6,5 +8,13 @@
         margin: 5px 0 20px;
         display: flex;
         justify-content: space-around;
+    }
+    &__empty {
+        margin-top: 10px;
+        padding: 20px;
+        width: 100%;
+        background-color: #6C757D;
+        color: $white;
+        border-radius: 5px;
     }
 }

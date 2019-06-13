@@ -5,27 +5,14 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import * as ProductStore from 'app/store';
 import { getProductStateBrandFilter } from 'app/store';
-import { transition, trigger, animate, state, style } from '@angular/animations'
+import { offersAnimation } from 'app/animations';
 
 @Component({
     selector: 'app-offers',
     templateUrl: './offers.component.html',
     styleUrls: ['./offers.component.scss'],
     animations: [
-        trigger('fadeIn', [
-            state('hide', style({
-                opacity: 0,
-            })),
-            state('show', style({
-                opacity: 1,
-            })),
-            transition('hide => show', [
-                animate('0.2s')
-            ]),
-            transition('show => hide', [
-                animate('0.2s')
-            ])
-        ])
+        offersAnimation
     ]
 })
 export class OffersComponent implements OnInit {
@@ -53,6 +40,10 @@ export class OffersComponent implements OnInit {
         })
     }
 
+    setDefaultBrandFilter() {
+        this.store.dispatch(new ProductStore.SetBrandFilter(""));
+    }  
+
     showDetails(value: string) {
         console.log(value);
     }
@@ -62,6 +53,7 @@ export class OffersComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.setDefaultBrandFilter();
         this.getAllProducts();
     }
 }

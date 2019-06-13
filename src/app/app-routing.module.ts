@@ -9,15 +9,15 @@ import { SearchResultComponent } from './components/search-result/search-result.
 import { HomeComponent } from 'components/home/home/home.component'; 
 
 const routes: Routes = [
-  {path: 'main', component: MainInfoComponent, children: [
+  {path: 'main', component: MainInfoComponent, data: {animation: "home"}, children: [
     {path: '', component: HomeComponent}
   ]},
-  {path: 'about', component: AboutComponent},
-  {path: 'instructions', component: InstructionsComponent},
-  {path: 'contacts', component: ContactsComponent},
-  {path: 'saving', component: SavingComponent},
-  {path: 'search-result', component: SearchResultComponent},
-  {path: '**', component: HomeComponent}
+  {path: 'about', component: AboutComponent, data: {animation: "about"}},
+  {path: 'instructions', component: InstructionsComponent, data: {animation: "instructions"}},
+  {path: 'contacts', component: ContactsComponent, data: {animation: "contacts"}},
+  {path: 'saving', component: SavingComponent, data: {animation: "saving"}},
+  {path: 'search-result', component: SearchResultComponent, data: {animation: "search"}},
+  {path: '**', component: HomeComponent, data: {animation: "unknown"}}
 ];
 
 @NgModule({

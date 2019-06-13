@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { Brand } from '../../../models/Brand';
 import { Store } from '@ngrx/store';
 import * as ProductStore from 'app/store';
@@ -11,10 +12,11 @@ import * as ProductStore from 'app/store';
 export class BrandsComponent implements OnInit {
     brands: Brand[];
 
-    constructor(private store: Store<ProductStore.state>) { }
+    constructor(private store: Store<ProductStore.state>, private router: Router) { }
 
     setBrandFilter(name: string) {
-        this.store.dispatch(new ProductStore.SetBrandFilter(name))
+        this.store.dispatch(new ProductStore.SetBrandFilter(name));
+        this.router.navigate(['/main']);
     }  
 
     ngOnInit() {

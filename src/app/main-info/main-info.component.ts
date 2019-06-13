@@ -1,17 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { slideInAnimation } from 'app/animations';
 
 @Component({
   selector: 'app-main-info',
   templateUrl: './main-info.component.html',
-  styleUrls: ['./main-info.component.scss']
+  styleUrls: ['./main-info.component.scss'],
+  animations: [
+    slideInAnimation
+  ]
 })
 export class MainInfoComponent implements OnInit {
 
-  constructor(private router: Router) { }
+    constructor(private router: Router) { }
 
-  ngOnInit() {
-    // this.router.navigate(['main']);
-  }
+    prepareRoute(outlet: RouterOutlet) {
+        return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    }
+    
+    ngOnInit() {
+        // this.router.navigate(['main']);
+    }
 
 }

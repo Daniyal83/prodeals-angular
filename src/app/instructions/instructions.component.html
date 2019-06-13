@@ -1,22 +1,3 @@
 <div class="instructions">
-  <li *ngFor="let product of products | async">
-      {{ product.title }}, RAM {{ product.ram}}, ROM {{ product.rom }}, Is special {{ product.special }}  
-  </li>
-  <hr>
-  <div class="new-product"> 
-    <h2 class="new-product__title">Add new Product details</h2>
-    <label for="title">Title</label>
-    <input type="text" [(ngModel)]="newProduct.title" name="title" >
-    <label for="brand">Brand</label>
-    <input type="text" [(ngModel)]="newProduct.brand" name="brand" >
-    <label for="price">Price</label>
-    <input type="number" [(ngModel)]="newProduct.price" name="price" >
-    <label for="colors">Color</label>
-    <input type="text" [(ngModel)]="color" name="colors" >
-    <label for="photo">Photo path</label>
-    <input type="text" [(ngModel)]="newProduct.photo" name="photo" >
-    <label for="special">Is it special?</label>
-    <input type="checkbox" [(ngModel)]="newProduct.special" name="special" >
-    <button (click)="addProduct(newProduct)">Add product</button>
-  </div>
+  Instructions
 </div>
