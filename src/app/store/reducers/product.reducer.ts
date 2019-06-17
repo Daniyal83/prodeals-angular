@@ -17,9 +17,7 @@ export const initialState: ProductState = {
 export function reducer(state = initialState, action: ProductActions.ProductActions): ProductState {
     switch(action.type) {
         case ProductActions.ADD_PRODUCT:
-            const { products } = state;
-            products.push(action.payload); 
-            return {...state, products};
+            return {...state, products: [...state.products, action.payload]};
         case ProductActions.SEARCH_PRODUCT:
             const searchValue = action.payload.toLowerCase();
             const searchResult = state.products.filter(item => item.brand.indexOf(searchValue) !== -1);
