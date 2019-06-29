@@ -1,12 +1,15 @@
 <div class="offers" [@fadeIn]="isReady ? 'show' : 'hide'">
-    <div class="offers__item" *ngFor="let product of products">
-        <app-product [product]="product"></app-product>
-        <div class="offers__buttons">
-            <app-button [buttonValue]="'Details'" (clicked)="showDetails($event)"></app-button>
-            <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event)"></app-button>
+    <div class="offers__products">
+        <div class="offers__item" *ngFor="let product of products | paginate: { itemsPerPage: 9, currentPage: page }">
+            <app-product [product]="product"></app-product>
+            <div class="offers__buttons">
+                <app-button [buttonValue]="'Details'" (clicked)="showDetails($event)"></app-button>
+                <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event)"></app-button>
+            </div>
+        </div>
+        <div class="offers__empty" *ngIf="isEmpty">
+            Currently there are no products of {{ brandFilter | async | titlecase }} presented on our service.
         </div>
     </div>
-    <div class="offers__empty" *ngIf="products && !products.length">
-        Currently there are no products of chosen brand presented on our service.
-    </div>
+    <pagination-controls *ngIf="!isEmpty" class="offers__page-control" (pageChange)="page = $event" previousLabel="Prev"></pagination-controls>
 </div>

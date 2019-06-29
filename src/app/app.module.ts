@@ -19,6 +19,7 @@ import { reducers } from './store';
 import { WelcomeComponent } from './components/home/welcome/welcome.component';
 import { OffersComponent } from './components/home/offers/offers.component';
 import { ButtonComponent } from './components/buttons/button/button.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ButtonComponent } from './components/buttons/button/button.component';
     BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
+    NgxPaginationModule,
     StoreModule.forRoot({product: reducers.product})
   ],
   providers: [],

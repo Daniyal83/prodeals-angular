@@ -2,8 +2,13 @@
 
 .offers {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    &__products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
     &__buttons {
         margin: 5px 0 20px;
         display: flex;
@@ -16,5 +21,11 @@
         background-color: #6C757D;
         color: $white;
         border-radius: 5px;
+    }
+    &__page-control /deep/ {
+        margin-top: 10px;
+        a.ng-star-inserted {
+            color: $dark-gray;
+        }
     }
 }
