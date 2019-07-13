@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../models/Product';
+import { Phone } from '../../models/Phone';
 import { offersAnimation } from 'app/animations';
 
 @Component({
@@ -12,7 +12,7 @@ import { offersAnimation } from 'app/animations';
 })
 
 export class ProductComponent implements OnInit {
-  @Input() product: Product;
+  @Input() product: Phone;
   isReady: Boolean = false;
   
   constructor() { }

@@ -8,7 +8,12 @@
             </div>
         </div>
         <div class="offers__empty" *ngIf="isEmpty">
-            Currently there are no products of {{ brandFilter | async | titlecase }} presented on our service.
+            <span *ngIf="brandFilter | async as brandFilter">
+                Currently there are no products of {{ brandFilter | titlecase }} presented on our service.
+            </span>
+            <span *ngIf="categoryFilter | async as categoryFilter">
+                Currently there are no products in {{ categoryFilter | titlecase }} category presented on our service.
+            </span>
         </div>
     </div>
     <pagination-controls *ngIf="!isEmpty" class="offers__page-control" (pageChange)="page = $event" previousLabel="Prev"></pagination-controls>

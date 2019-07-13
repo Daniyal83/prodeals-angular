@@ -15,6 +15,7 @@ export class BrandsComponent implements OnInit {
     constructor(private store: Store<ProductStore.state>, private router: Router) { }
 
     setBrandFilter(name: string) {
+        this.store.dispatch(new ProductStore.SetCategoryFilter(""));
         this.store.dispatch(new ProductStore.SetBrandFilter(name));
         this.router.navigate(['/main']);
     }  

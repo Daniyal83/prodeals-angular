@@ -1,5 +1,6 @@
-export class Product {
+export interface Phone {
     id?: number;
+    category: string;
     brand: string;
     title: string;
     price: number;

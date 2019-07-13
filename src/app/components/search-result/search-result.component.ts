@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as ProductStore from '../../store';
 import { Observable } from 'rxjs';
-import { Product } from '../../models/Product';
+import { Phone } from '../../models/Phone';
 import { getProductStateSearchResult } from '../../store';
 
 @Component({
@@ -11,7 +11,7 @@ import { getProductStateSearchResult } from '../../store';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
-  products: Observable<Product[]>
+  products: Observable<Phone[]>
 
   constructor(private store: Store<ProductStore.state>) { 
     this.products = store.select(getProductStateSearchResult);

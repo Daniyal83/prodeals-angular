@@ -1,0 +1,19 @@
+@import "assets/styles/colors.scss";
+
+.categories {
+    margin-top: 10px;
+    &__item {
+        list-style: none;
+        padding: 10px 0 10px 20px;
+        cursor: pointer;
+        color: $gray;
+        &:nth-child(2n-1) {
+            background-color: $light-gray;
+        }
+        &:hover {
+            text-decoration: underline;
+            color: $dark-gray;
+        }
+        display: flex;
+    }
+}

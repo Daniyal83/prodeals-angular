@@ -1,17 +1,19 @@
 import * as ProductActions from '../actions/product.actions';
 import { PRODUCTS } from '../../all-products/products';
-import { Product } from '../../models/Product';
+import { Phone } from '../../models/Phone';
 
 export interface ProductState {
-    products: Product[],
-    searchResult: Product[],
-    brandFilter: string
+    products: Phone[],
+    searchResult: Phone[],
+    brandFilter: string,
+    categoryFilter: string
 }
 
 export const initialState: ProductState = {
     products: PRODUCTS,
     searchResult: [],
-    brandFilter: ''
+    brandFilter: '',
+    categoryFilter: ''
 } 
 
 export function reducer(state = initialState, action: ProductActions.ProductActions): ProductState {
@@ -23,9 +25,13 @@ export function reducer(state = initialState, action: ProductActions.ProductActi
             const searchResult = state.products.filter(item => item.brand.indexOf(searchValue) !== -1);
             return {...state, searchResult};
         case ProductActions.SET_BRANDFILTER:
-            const filter = action.payload.toLowerCase();
-            const brandFilter = filter !== 'all' ? filter : '';
+            const filter_b = action.payload.toLowerCase();
+            const brandFilter = filter_b !== 'all' ? filter_b : '';
             return {...state, brandFilter}
+        case ProductActions.SET_CATEGORYFILTER:
+            const filter_c = action.payload.toLowerCase();
+            const categoryFilter = filter_c !== 'all' ? filter_c : '';
+            return {...state, categoryFilter}
         default:
             return state;
     }
@@ -34,3 +40,5 @@ export function reducer(state = initialState, action: ProductActions.ProductActi
 export const getProducts = (state: ProductState) => state.products;
 export const getSearchResult = (state: ProductState) => state.searchResult;
 export const getBrandFilter = (state: ProductState) => state.brandFilter;
+export const getCategoryFilter = (state: ProductState) => state.categoryFilter;
+

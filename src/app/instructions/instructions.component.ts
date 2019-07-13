@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import { Product } from './../models/Product';
+import { Phone } from './../models/Phone';
 import * as ProductStore from '../store';
 import { getProductStateProducts, getProductStateSearchResult } from '../store';
 
@@ -11,10 +11,11 @@ import { getProductStateProducts, getProductStateSearchResult } from '../store';
   styleUrls: ['./instructions.component.scss']
 })
 export class InstructionsComponent implements OnInit {
-  products: Observable<Product[]>;
-  searchResult: Observable<Product[]>;
-  newProduct: Product = {
+  products: Observable<Phone[]>;
+  searchResult: Observable<Phone[]>;
+  newProduct: Phone = {
     title: "",
+    category: "",
     brand: "",
     price: 0,
     colors: [],
