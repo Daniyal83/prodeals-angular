@@ -1,3 +1,16 @@
-<p *ngIf="$product | async as product">
-  {{ product.title }}
-</p>
+<ng-container *ngIf="$product | async as product">
+    <div class="details">
+        <app-title [title]="product.title"></app-title>
+        <img class="details__photo" [src]="product.photo" alt="product.title" class="details__photo">
+        <div class="details__info">
+            <div class="details__item" *ngFor="let item of product | keyvalue">
+                <app-label-value *ngIf="isInfo(item.key)" 
+                    [label]="item.key | titlecase" 
+                    [value]="item.value"
+                    [isCurrency]="item.key==='price'">
+                </app-label-value>
+            </div>
+        </div>
+        <app-button buttonValue="Go to store" (clicked)="goToStore(product.href)" class="details__button"></app-button>
+    </div>
+</ng-container>

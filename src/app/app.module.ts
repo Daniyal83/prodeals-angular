@@ -22,6 +22,7 @@ import { ButtonComponent } from './components/buttons/button/button.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CategoriesComponent } from './components/filters/categories/categories.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { LabelValueComponent } from './components/label-value/label-value.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ButtonComponent,
     routingComponents,
     CategoriesComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    LabelValueComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     FormsModule,
     AppRoutingModule,
     NgxPaginationModule,
-    StoreModule.forRoot({product: reducers.product})
+    StoreModule.forRoot({product: reducers.product}),
   ],
   providers: [],
   bootstrap: [AppComponent]

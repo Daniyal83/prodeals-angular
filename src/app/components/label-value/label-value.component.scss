@@ -1,0 +1,12 @@
+@import "assets/styles/colors.scss";
+
+.label-value {
+    &__label {
+        color: $gray;
+    }
+    &__value {
+        color: $navi;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
