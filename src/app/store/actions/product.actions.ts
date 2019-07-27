@@ -6,6 +6,7 @@ export const REMOVE_PRODUCT = '[Product] Remove'
 export const SEARCH_PRODUCT = '[Product] Search'
 export const SET_BRANDFILTER = 'Set brand filter'
 export const SET_CATEGORYFILTER = 'Set category filter'
+export const SET_PRODUCT_DETAILS = '[Product] Set details'
 
 export class AddProduct implements Action {
     readonly type = ADD_PRODUCT
@@ -32,4 +33,9 @@ export class SetCategoryFilter implements Action {
     constructor(public payload: string) {}
 }
 
-export type ProductActions = AddProduct | SearchProduct | RemoveProduct | SetBrandFilter | SetCategoryFilter
+export class SetProductDetails implements Action {
+    readonly type = SET_PRODUCT_DETAILS
+    constructor(public payload: Phone) {}
+}
+
+export type ProductActions = AddProduct | SearchProduct | RemoveProduct | SetBrandFilter | SetCategoryFilter | SetProductDetails

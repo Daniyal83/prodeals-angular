@@ -21,6 +21,7 @@ import { OffersComponent } from './components/home/offers/offers.component';
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CategoriesComponent } from './components/filters/categories/categories.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CategoriesComponent } from './components/filters/categories/categories.
     OffersComponent,
     ButtonComponent,
     routingComponents,
-    CategoriesComponent
+    CategoriesComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

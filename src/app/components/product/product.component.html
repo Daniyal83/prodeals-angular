@@ -1,5 +1,5 @@
-<div class="product" [@fadeIn]="isReady ? 'show' : 'hide'">
+<div class="product" [@fadeIn]="isReady ? 'show' : 'hide'" (click)="showProductDetails()">
   <span class="product__title"> {{ product.title }} </span>
-  <img [src]="product.photo" alt="Xioami Redmi Note 7" class="product__image">
+  <img [src]="product.photo" [alt]="product.title" class="product__image">
   <span class="product__price">{{ product.price }} &#36;</span>
 </div>

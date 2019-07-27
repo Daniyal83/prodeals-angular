@@ -3,8 +3,8 @@
         <div class="offers__item" *ngFor="let product of products | paginate: { itemsPerPage: 9, currentPage: page }">
             <app-product [product]="product"></app-product>
             <div class="offers__buttons">
-                <app-button [buttonValue]="'Details'" (clicked)="showDetails($event)"></app-button>
-                <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event)"></app-button>
+                <app-button [buttonValue]="'Details'" (clicked)="showDetails($event, product)"></app-button>
+                <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event, product)"></app-button>
             </div>
         </div>
         <div class="offers__empty" *ngIf="isEmpty">

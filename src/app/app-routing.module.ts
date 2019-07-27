@@ -6,7 +6,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SavingComponent } from './saving/saving.component';
 import { SearchResultComponent } from './components/search-result/search-result.component';
-import { HomeComponent } from 'components/home/home/home.component'; 
+import { HomeComponent } from 'components/home/home/home.component';
+import { ProductDetailsComponent } from 'components/product-details/product-details.component';
 
 const routes: Routes = [
   {path: 'main', component: MainInfoComponent, data: {animation: "home"}, children: [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'contacts', component: ContactsComponent, data: {animation: "contacts"}},
   {path: 'saving', component: SavingComponent, data: {animation: "saving"}},
   {path: 'search-result', component: SearchResultComponent, data: {animation: "search"}},
+  {path: 'product-details', component: ProductDetailsComponent, data: {animation: "product-details"}},
   {path: '**', component: HomeComponent, data: {animation: "unknown"}}
 ];
 
@@ -32,5 +34,6 @@ export const routingComponents = [
     InstructionsComponent,
     ContactsComponent,
     SavingComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    ProductDetailsComponent
 ]

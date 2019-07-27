@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { Phone } from 'app/models/Phone';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import * as ProductStore from 'app/store';
 import { getProductStateBrandFilter, getProductStateCategoryFilter } from 'app/store';
@@ -27,7 +28,10 @@ export class OffersComponent implements OnInit {
         return !this.products || !this.products.length;
     }
 
-    constructor(private productService: ProductService, private store: Store<ProductStore.state>) { 
+    constructor(
+        private productService: ProductService, 
+        private store: Store<ProductStore.state>,
+        private router: Router) { 
         this.brandFilter = store.select(getProductStateBrandFilter);
         this.categoryFilter = store.select(getProductStateCategoryFilter);
     }
@@ -70,12 +74,13 @@ export class OffersComponent implements OnInit {
         this.store.dispatch(new ProductStore.SetCategoryFilter(""));
     }
 
-    showDetails(value: string) {
-        console.log(value);
+    showDetails(value: string, product: Phone) {
+        this.store.dispatch(new ProductStore.SetProductDetails(product));
+        this.router.navigate(['/product-details'])
     }
 
-    goToStore(value: string) {
-        console.log(value);
+    goToStore(value: string, product: Phone) {
+        window.location.href = product.href;
     }
 
     ngOnInit() {
