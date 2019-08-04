@@ -17,6 +17,9 @@ export class BrandsComponent implements OnInit {
     setBrandFilter(name: string) {
         this.store.dispatch(new ProductStore.SetCategoryFilter(""));
         this.store.dispatch(new ProductStore.SetBrandFilter(name));
+        if(name !== 'All') {
+            return this.router.navigate([`/main/filtered/${name}`]);
+        }
         this.router.navigate(['/main']);
     }  
 

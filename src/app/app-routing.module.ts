@@ -11,7 +11,8 @@ import { ProductDetailsComponent } from 'components/product-details/product-deta
 
 const routes: Routes = [
   {path: 'main', component: MainInfoComponent, data: {animation: "home"}, children: [
-    {path: '', component: HomeComponent}
+    {path: '', component: HomeComponent},
+    {path: 'filtered/:filter', component: HomeComponent}
   ]},
   {path: 'about', component: AboutComponent, data: {animation: "about"}},
   {path: 'instructions', component: InstructionsComponent, data: {animation: "instructions"}},

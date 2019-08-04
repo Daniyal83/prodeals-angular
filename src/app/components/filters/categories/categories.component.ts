@@ -18,7 +18,7 @@ export class CategoriesComponent implements OnInit {
     setCategoriesFilter(name: string) {
         this.store.dispatch(new ProductStore.SetBrandFilter(""));
         this.store.dispatch(new ProductStore.SetCategoryFilter(name));
-        this.router.navigate(['/main']);
+        this.router.navigate([`/main/filtered/${name}`]);
     }
 
     ngOnInit() {

@@ -3,6 +3,7 @@ import { ProductService } from '../../../services/product.service';
 import { Phone } from 'app/models/Phone';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import * as ProductStore from 'app/store';
 import { getProductStateBrandFilter, getProductStateCategoryFilter } from 'app/store';
@@ -19,7 +20,7 @@ import { computed } from 'mobx-angular';
 })
 export class OffersComponent implements OnInit {
     isReady: Boolean = false;
-    products: Phone[];
+    products: Phone[] = [];
     brandFilter: Observable<string>;
     categoryFilter: Observable<string>;
     page = 1;
@@ -31,7 +32,8 @@ export class OffersComponent implements OnInit {
     constructor(
         private productService: ProductService, 
         private store: Store<ProductStore.state>,
-        private router: Router) { 
+        private router: Router,
+        private route: ActivatedRoute) { 
         this.brandFilter = store.select(getProductStateBrandFilter);
         this.categoryFilter = store.select(getProductStateCategoryFilter);
     }
@@ -50,11 +52,13 @@ export class OffersComponent implements OnInit {
             }, 200);
         })
         this.categoryFilter.subscribe(res => {
-            this.isReady = false;
-            setTimeout(() => {
-                this.products = this.getFilteredByCategoryProducts(allProducts, res);
-                this.isReady = true
-            }, 200);
+            if(res) {
+                this.isReady = false;
+                setTimeout(() => {
+                    this.products = this.getFilteredByCategoryProducts(allProducts, res);
+                    this.isReady = true
+                }, 200);
+            }
         })
     }
 
@@ -67,11 +71,15 @@ export class OffersComponent implements OnInit {
     }
 
     setDefaultBrandFilter() {
-        this.store.dispatch(new ProductStore.SetBrandFilter(""));
+        if(!this.route.snapshot.params.filter) {
+            this.store.dispatch(new ProductStore.SetBrandFilter(""));
+        }
     }
 
     setDefaultCategoryFilter() {
-        this.store.dispatch(new ProductStore.SetCategoryFilter(""));
+        if(!this.route.snapshot.params.filter) {
+            this.store.dispatch(new ProductStore.SetCategoryFilter(""));
+        }
     }
 
     showDetails(value: string, product: Phone) {
@@ -84,6 +92,7 @@ export class OffersComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log(this.route.snapshot.params.filter);
         this.setDefaultBrandFilter();
         this.setDefaultCategoryFilter();
         this.getAllProducts();
