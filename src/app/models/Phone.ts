@@ -10,4 +10,5 @@ export interface Phone {
     ram?: string;
     rom?: string;
     href?: string;
+    isDiscount?: boolean;
 }

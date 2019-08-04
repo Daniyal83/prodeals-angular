@@ -70,14 +70,9 @@ export class OffersComponent implements OnInit {
         return arr.filter(item => item.category.toLowerCase().indexOf(filter) !== -1);
     }
 
-    setDefaultBrandFilter() {
+    setDefaultFilters() {
         if(!this.route.snapshot.params.filter) {
             this.store.dispatch(new ProductStore.SetBrandFilter(""));
-        }
-    }
-
-    setDefaultCategoryFilter() {
-        if(!this.route.snapshot.params.filter) {
             this.store.dispatch(new ProductStore.SetCategoryFilter(""));
         }
     }
@@ -92,9 +87,7 @@ export class OffersComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.route.snapshot.params.filter);
-        this.setDefaultBrandFilter();
-        this.setDefaultCategoryFilter();
+        this.setDefaultFilters();
         this.getAllProducts();
     }
 }

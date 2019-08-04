@@ -1,3 +1,5 @@
+@import "assets/styles/colors.scss";
+
 .details {
     display: flex;
     flex-direction: column;
@@ -15,5 +17,13 @@
     }
     &__item {
         margin-bottom: 10px;
+    }
+    &__discount {
+        color: $gray;
+        margin-bottom: 20px; 
+    }
+    &__link {
+        color: $navi;
+        font-weight: bold;
     }
 }

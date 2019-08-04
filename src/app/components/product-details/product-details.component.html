@@ -11,6 +11,10 @@
                 </app-label-value>
             </div>
         </div>
+        <div class="details__discount" *ngIf="product.isDiscount">
+            This product you can buy with a discount or a gift. See the 
+            <a class="details__link" routerLink="/instructions">Instructions</a>.
+        </div>
         <app-button buttonValue="Go to store" (clicked)="goToStore(product.href)" class="details__button"></app-button>
     </div>
 </ng-container>

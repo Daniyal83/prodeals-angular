@@ -19,7 +19,7 @@ export class ProductDetailsComponent implements OnInit {
     }
 
     isInfo(key: string) {
-        const noInfoKeys = ["title", "href", "category", "special", "photo"]
+        const noInfoKeys = ["title", "href", "category", "special", "photo", "isDiscount"];
         return noInfoKeys.indexOf(key) === -1;
     }
 

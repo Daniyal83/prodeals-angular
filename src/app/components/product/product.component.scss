@@ -10,6 +10,7 @@
     box-sizing: border-box;
     cursor: pointer;
     min-width: 230px;
+    position: relative;
     &__title {
         color: $orange;
         &:hover {
@@ -22,5 +23,12 @@
     &__image {
         max-width: 200px;
         box-sizing: border-box;
+    }
+    &__discount {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        width: 40px;
+        height: 25px;
     }
 }
