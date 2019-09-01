@@ -2,4 +2,20 @@
 
 .search-result {
     color: $gray;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__item {
+        margin-bottom: 10px;
+    }
+    &__link {
+        color: $navi;
+        font-weight: 500;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            color: #303030;
+            border-bottom: 1px solid #303030;
+        }
+    }
 }
