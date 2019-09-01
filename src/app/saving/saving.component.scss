@@ -1,0 +1,19 @@
+@import "assets/styles/colors.scss";
+
+.saving {
+    color: $gray;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__main {
+        text-indent: 20px;
+    }
+    &__link {
+        color: $navi;
+        font-weight: 500;
+        transition: all 0.2s;
+        &:hover {
+            color: #303030;
+        }
+    }
+}
