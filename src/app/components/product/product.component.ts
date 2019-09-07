@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Phone } from 'app/models/Phone';
 import { Store } from '@ngrx/store';
 import * as ProductStore from 'app/store';
 import { Router } from '@angular/router';
@@ -15,7 +14,7 @@ import { offersAnimation } from 'app/animations';
 })
 
 export class ProductComponent implements OnInit {
-  @Input() product: Phone;
+  @Input() product: any;
   isReady: Boolean = false;
   
   constructor(private store: Store<ProductStore.state>, private router: Router) { }

@@ -4,8 +4,11 @@ export interface Phone {
     rusCategory: string;
     brand: string;
     title: string;
-    price: number;
+    price: any;
     colors: string[];
+    cameras?: string;
+    accumulator?: string,
+    dimensions?: string,
     photo: string;
     special: boolean;
     ram?: string;
