@@ -3,16 +3,16 @@
         <div class="offers__item" *ngFor="let product of products | paginate: { itemsPerPage: 9, currentPage: page }">
             <app-product [product]="product"></app-product>
             <div class="offers__buttons">
-                <app-button [buttonValue]="'Details'" (clicked)="showDetails($event, product)"></app-button>
-                <app-button [buttonValue]="'Go to Store'" (clicked)="goToStore($event, product)"></app-button>
+                <app-button [buttonValue]="'О товаре'" (clicked)="showDetails($event, product)"></app-button>
+                <app-button [buttonValue]="'В магазин =>'" (clicked)="goToStore($event, product)"></app-button>
             </div>
         </div>
         <div class="offers__empty" *ngIf="isEmpty">
             <span *ngIf="brandFilter | async as brandFilter">
-                Currently there are no products of {{ brandFilter | titlecase }} presented on our service.
+                В данный момент продукты брэнда {{ brandFilter | titlecase }} не представлены на нашем сайте.
             </span>
             <span *ngIf="categoryFilter | async as categoryFilter">
-                Currently there are no products in {{ categoryFilter | titlecase }} category presented on our service.
+                В данный момент продукты из категории {{ categoryFilter | titlecase }} не представлены на нашем сайте.
             </span>
         </div>
     </div>

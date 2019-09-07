@@ -17,7 +17,7 @@ export class BrandsComponent implements OnInit {
     setBrandFilter(name: string) {
         this.store.dispatch(new ProductStore.SetCategoryFilter(""));
         this.store.dispatch(new ProductStore.SetBrandFilter(name));
-        if(name !== 'All') {
+        if(name !== 'Все') {
             return this.router.navigate([`/main/filtered/${name}`]);
         }
         this.router.navigate(['/main']);
@@ -25,7 +25,7 @@ export class BrandsComponent implements OnInit {
 
     ngOnInit() {
         this.brands = [
-        {id: 0, name: "All"},
+        {id: 0, name: "Все"},
         {id: 1, name: "Xiaomi"},
         {id: 2, name: "Meizu"},
         {id: 3, name: "Lenovo"},

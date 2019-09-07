@@ -67,7 +67,7 @@ export class OffersComponent implements OnInit {
     }
 
     getFilteredByCategoryProducts(arr, filter) {
-        return arr.filter(item => item.category.toLowerCase().indexOf(filter) !== -1);
+        return arr.filter(item => item.rusCategory.toLowerCase().indexOf(filter) !== -1);
     }
 
     setDefaultFilters() {

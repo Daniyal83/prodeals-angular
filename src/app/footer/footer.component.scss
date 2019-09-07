@@ -1,5 +1,6 @@
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     bottom: 10px;
@@ -9,4 +10,8 @@
     background-color: #F8F6F6;
     box-sizing: border-box;
     border-top: 1px solid #DFDFDF;
+    &__info {
+        font-size: 12px;
+        margin-top: 10px;
+    }
 }

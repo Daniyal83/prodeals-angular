@@ -28,11 +28,11 @@ export function reducer(state = initialState, action: ProductActions.ProductActi
             return {...state, searchResult};
         case ProductActions.SET_BRANDFILTER:
             const filter_b = action.payload.toLowerCase();
-            const brandFilter = filter_b !== 'all' ? filter_b : '';
+            const brandFilter = filter_b !== 'все' ? filter_b : '';
             return {...state, brandFilter}
         case ProductActions.SET_CATEGORYFILTER:
             const filter_c = action.payload.toLowerCase();
-            const categoryFilter = filter_c !== 'all' ? filter_c : '';
+            const categoryFilter = filter_c !== 'все' ? filter_c : '';
             return {...state, categoryFilter}
         case ProductActions.SET_PRODUCT_DETAILS:
             return {...state, chosenProduct: action.payload}

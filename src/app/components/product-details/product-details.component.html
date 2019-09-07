@@ -12,9 +12,9 @@
             </div>
         </div>
         <div class="details__message">
-            <span *ngIf="product.isDiscount">This product you can buy with a discount or a gift.</span> See the 
-            <a class="details__link" routerLink="/instructions">Instructions</a>.
+            <span *ngIf="product.isDiscount">Этот товар вы можете купить со скидкой или получить бесплатный подарок.</span> Читайте 
+            <a class="details__link" routerLink="/instructions">инструкцию</a>.
         </div>
-        <app-button buttonValue="Go to store" (clicked)="goToStore(product.href)" class="details__button"></app-button>
+        <app-button buttonValue="В магазин =>" (clicked)="goToStore(product.href)" class="details__button"></app-button>
     </div>
 </ng-container>

@@ -18,16 +18,21 @@ export class CategoriesComponent implements OnInit {
     setCategoriesFilter(name: string) {
         this.store.dispatch(new ProductStore.SetBrandFilter(""));
         this.store.dispatch(new ProductStore.SetCategoryFilter(name));
-        this.router.navigate([`/main/filtered/${name}`]);
+        if(name !== 'Все') {
+            return this.router.navigate([`/main/filtered/${name}`]);
+        }
+        this.router.navigate(['/main']);
     }
 
     ngOnInit() {
         this.categories = [
-            {id: 1, name: "Phones"},
-            {id: 2, name: "Headphones"},
-            {id: 3, name: "Cases"},
-            {id: 4, name: "TV-boxes"},
-            {id: 5, name: "Watches"}
+            {id: 0, name: "All", rusName: 'Все'},
+            {id: 1, name: "Phones", rusName: 'Смартфоны'},
+            {id: 2, name: "Headphones", rusName: 'Наушники'},
+            {id: 3, name: "Cases", rusName: 'Чехлы'},
+            {id: 4, name: "TV-boxes", rusName: 'ТВ-приставки'},
+            {id: 5, name: "Projectors", rusName: 'Проекторы'},
+            {id: 5, name: "Watches", rusName: 'Часы'}
         ]
     }
 

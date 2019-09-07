@@ -1,6 +1,7 @@
 export interface Phone {
     id?: number;
     category: string;
+    rusCategory: string;
     brand: string;
     title: string;
     price: number;
