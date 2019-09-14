@@ -19,7 +19,6 @@ export class MainInfoComponent implements OnInit {
     }
     
     ngOnInit() {
-        // this.router.navigate(['main']);
     }
 
 }
