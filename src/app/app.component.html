@@ -1,17 +1,18 @@
 <div class="main">
-  <div class="container">
-    <app-header></app-header>
-    <div class="inner">
-      <div class="inner__left-block">
-        <app-left-block></app-left-block>
-      </div>
-      <div class="inner__main">
-        <app-main-info></app-main-info>
-      </div>
-      <div class="inner__right-block">
-        <app-right-block></app-right-block>
-      </div>
+    <div class="site-develop" *ngIf="isSiteWorkRemain" [@slideInOut]>Сайт все еще дорабатывается. Мы улучшаемся с каждым днем. :)</div>
+    <div class="container">
+        <app-header></app-header>
+        <div class="inner">
+            <div class="inner__left-block">
+                <app-left-block></app-left-block>
+            </div>
+            <div class="inner__main">
+                <app-main-info></app-main-info>
+            </div>
+            <div class="inner__right-block">
+                <app-right-block></app-right-block>
+            </div>
+        </div>
+        <app-footer></app-footer>
     </div>
-    <app-footer></app-footer>
-  </div>
 </div>
