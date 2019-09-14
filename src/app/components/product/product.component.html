@@ -1,6 +1,8 @@
 <div class="product" [@fadeIn]="isReady ? 'show' : 'hide'" (click)="showProductDetails()">
   <span class="product__title"> {{ product.title }} </span>
-  <img [src]="product.photo" [alt]="product.title" class="product__image">
+  <div class="product__photo-wrapper">
+    <img [src]="product.photo" [alt]="product.title" class="product__image">
+  </div>
   <span class="product__price">{{ product.price }} &#36;</span>
   <img *ngIf="product.isDiscount" src="../../../assets/images/discount_percent.png" [alt]="product.title" class="product__discount">
 </div>
