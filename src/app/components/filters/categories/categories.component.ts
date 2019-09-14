@@ -15,11 +15,11 @@ export class CategoriesComponent implements OnInit {
 
     constructor(private store: Store<ProductStore.state>, private router: Router) { }
 
-    setCategoriesFilter(name: string) {
+    setCategoriesFilter(category: any) {
         this.store.dispatch(new ProductStore.SetBrandFilter(""));
-        this.store.dispatch(new ProductStore.SetCategoryFilter(name));
-        if(name !== 'Все') {
-            return this.router.navigate([`/main/filtered/${name}`]);
+        this.store.dispatch(new ProductStore.SetCategoryFilter(category.rusName));
+        if(category.rusName !== 'Все') {
+            return this.router.navigate([`/main/filtered/${category.name}`]);
         }
         this.router.navigate(['/main']);
     }

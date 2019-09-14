@@ -1,6 +1,6 @@
 <div class="categories">
     <app-title title="Категории"></app-title>
-    <li class="categories__item" *ngFor="let category of categories" (click)="setCategoriesFilter(category.rusName)"> 
+    <li class="categories__item" *ngFor="let category of categories" (click)="setCategoriesFilter(category)"> 
       {{ category.rusName }}
     </li>
   </div>
