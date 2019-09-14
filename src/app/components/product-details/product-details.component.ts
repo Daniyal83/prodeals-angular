@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Phone } from 'app/models/Phone';
+import { ProductService } from '../../services/product.service';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import { Router } from '@angular/router'
+import { ActivatedRoute } from '@angular/router'
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import * as ProductStore from 'app/store';
@@ -15,8 +16,12 @@ import { getProductStateChosenProduct } from 'app/store';
 })
 export class ProductDetailsComponent implements OnInit {
     $product: Observable<Phone>
+    products: Phone[] = [];
 
-    constructor(private store: Store<ProductStore.state>, private router: Router,
+    constructor(
+        private store: Store<ProductStore.state>, 
+        private route: ActivatedRoute,
+        private productService: ProductService,
         private renderer2: Renderer2, @Inject(DOCUMENT) private _document) { 
         this.$product = store.select(getProductStateChosenProduct)
     }
@@ -31,9 +36,11 @@ export class ProductDetailsComponent implements OnInit {
     }
 
     ngOnInit() {
+        const title = this.route.snapshot.paramMap.get("title");
+        const productByTitle = this.productService.getProductByTitle(title);
         this.$product.subscribe(res => {
             if(!res) {
-                return this.router.navigate(['/'])
+                this.store.dispatch(new ProductStore.SetProductDetails(productByTitle));
             }
         });
         const d = this._document.body || this._document.head;

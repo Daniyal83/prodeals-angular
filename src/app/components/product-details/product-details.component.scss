@@ -8,12 +8,17 @@
         align-self: center;
     }
     &__photo {
-        max-width: 200px;
+        max-width: 135px;
         margin-top: 40px; 
         align-self: center;
     }
     &__info {
         margin: 40px 0;
+        background: $light-gray;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 0 10px $medi-gray;
     }
     &__item {
         margin-bottom: 10px;

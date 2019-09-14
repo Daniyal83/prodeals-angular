@@ -3,13 +3,7 @@
         <app-title [title]="product.title"></app-title>
         <img class="details__photo" [src]="product.photo" alt="product.title" class="details__photo">
         <div class="details__info">
-            <div class="details__item" *ngFor="let item of product | keyvalue">
-                <app-label-value *ngIf="isInfo(item.key)" 
-                    [label]="item.key | titlecase" 
-                    [value]="item.value"
-                    [isCurrency]="item.key==='price'">
-                </app-label-value>
-            </div>
+            <app-phone-features *ngIf="product.category === 'phones'" [phone]="product"></app-phone-features>
         </div>
         <div class="details__message">
             <span *ngIf="product.isDiscount">Этот товар вы можете купить со скидкой или получить бесплатный подарок.</span> Читайте 
