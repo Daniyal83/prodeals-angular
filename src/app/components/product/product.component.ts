@@ -21,7 +21,7 @@ export class ProductComponent implements OnInit {
 
   showProductDetails() {
     this.store.dispatch(new ProductStore.SetProductDetails(this.product));
-    this.router.navigate(['/product-details'])
+    this.router.navigate([`/product-details/${this.product.title.replace(/[\/ ]/g, "_")}`])
   }
 
   ngOnInit() {

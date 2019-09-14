@@ -22,7 +22,7 @@ export class SearchResultComponent implements OnInit {
 
   showDetails(value: string, prod: Phone) {
     this.store.dispatch(new ProductStore.SetProductDetails(prod));
-    this.router.navigate(['/product-details'])
+    this.router.navigate([`/product-details/${prod.title.replace(/[\/ ]/g, "_")}`]);
   }
 
   ngOnInit() {

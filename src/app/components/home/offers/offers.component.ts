@@ -79,7 +79,7 @@ export class OffersComponent implements OnInit {
 
     showDetails(value: string, product: Phone) {
         this.store.dispatch(new ProductStore.SetProductDetails(product));
-        this.router.navigate(['/product-details'])
+        this.router.navigate([`/product-details/${product.title.replace(/[\/ ]/g, "_")}`])
     }
 
     goToStore(value: string, product: Phone) {
