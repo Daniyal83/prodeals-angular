@@ -13,4 +13,8 @@ export class ProductService {
     return PRODUCTS;
   }
 
+  getProductByTitle(title) {
+    return PRODUCTS.find(item => item.title.replace(/[\/ ]/g, "_") === title);
+  }
+
 }
