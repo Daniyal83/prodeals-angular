@@ -23,6 +23,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CategoriesComponent } from './components/filters/categories/categories.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { LabelValueComponent } from './components/label-value/label-value.component';
+import { PhoneFeaturesComponent } from './components/product-features/phone-features/phone-features.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LabelValueComponent } from './components/label-value/label-value.compon
     routingComponents,
     CategoriesComponent,
     ProductDetailsComponent,
-    LabelValueComponent
+    LabelValueComponent,
+    PhoneFeaturesComponent
   ],
   imports: [
     BrowserModule,

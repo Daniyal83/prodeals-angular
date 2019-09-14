@@ -1,0 +1,22 @@
+@import "assets/styles/colors.scss";
+
+.list {
+    &__item {
+        margin-bottom: 10px;
+        background: $white;
+        box-sizing: border-box;
+        padding: 3px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__item-label {
+        color: $gray;
+    }
+    &__item-value {
+        color: $navi;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+}
