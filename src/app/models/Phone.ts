@@ -4,15 +4,23 @@ export interface Phone {
     rusCategory: string;
     brand: string;
     title: string;
-    price: any;
-    colors: string[];
+    price?: any;
+    colors?: string;
     cameras?: string;
-    accumulator?: string,
+    battery?: string,
     dimensions?: string,
+    weight?: string;
     photo: string;
     special: boolean;
     ram?: string;
     rom?: string;
+    processor?: string;
+    display?: string;
+    simcards?: string,
+    networks?: string;
+    lte?: string;
+    os?: string;
+    features?: string;
     href?: string;
     isDiscount?: boolean;
 }

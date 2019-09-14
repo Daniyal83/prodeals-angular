@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
         setTimeout(() => {
             this.isShow = true;
-        }, 500),
+        }, 500)
 
         this.animate()
     }
