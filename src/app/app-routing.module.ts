@@ -10,7 +10,7 @@ import { HomeComponent } from 'components/home/home/home.component';
 import { ProductDetailsComponent } from 'components/product-details/product-details.component';
 
 const routes: Routes = [
-  {path: 'main', component: MainInfoComponent, data: {animation: "home"}, children: [
+  {path: 'main', component: MainInfoComponent, children: [
     {path: '', component: HomeComponent},
     {path: 'filtered/:filter', component: HomeComponent}
   ]},
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'contacts', component: ContactsComponent, data: {animation: "contacts"}},
   {path: 'saving', component: SavingComponent, data: {animation: "saving"}},
   {path: 'search-result', component: SearchResultComponent, data: {animation: "search"}},
-  {path: 'product-details', component: ProductDetailsComponent, data: {animation: "product-details"}},
+  {path: 'product-details/:title', component: ProductDetailsComponent, data: {animation: "product-details"}},
   {path: '**', component: HomeComponent, data: {animation: "unknown"}}
 ];
 
