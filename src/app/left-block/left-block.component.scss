@@ -1,5 +1,8 @@
 .left-block {
     &__banner {
         margin-top: 10px;
+        @media (max-width: 1050px) {
+            display: none;
+        }
     }
 }

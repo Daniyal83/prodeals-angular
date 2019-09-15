@@ -1,5 +1,8 @@
 .right-block {
     &__banner {
         margin-top: 10px;
+        @media (max-width: 1240px) {
+            display: none;
+        }
     }
 }

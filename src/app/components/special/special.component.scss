@@ -3,4 +3,7 @@
     &__link {
         text-decoration: none;
     }
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
