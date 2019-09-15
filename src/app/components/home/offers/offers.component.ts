@@ -43,8 +43,10 @@ export class OffersComponent implements OnInit {
     }
 
     getAllProducts(): void {
+        let brand, category;
         const allProducts = this.productService.getProducts();
         this.brandFilter.subscribe(res => {
+            brand = res;
             this.isReady = false;
             setTimeout(() => {
                 this.products = this.getFilteredByBrandProducts(allProducts, res);
@@ -52,6 +54,7 @@ export class OffersComponent implements OnInit {
             }, 200);
         })
         this.categoryFilter.subscribe(res => {
+            category = res;
             if(res) {
                 this.isReady = false;
                 setTimeout(() => {
@@ -60,6 +63,9 @@ export class OffersComponent implements OnInit {
                 }, 200);
             }
         })
+        if(!brand && !category) {
+            this.router.navigate(['/main'])
+        }
     }
 
     getFilteredByBrandProducts(arr, filter) {
