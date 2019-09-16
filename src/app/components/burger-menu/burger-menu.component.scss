@@ -44,6 +44,22 @@
     }
 }
 
+.opened {
+    .button__bar {
+        &:first-child {
+            transform: rotate(31deg);
+            transform-origin: top left;
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:last-child {
+            transform: rotate(-31deg);
+            transform-origin: top left;
+        }
+    }
+}
+
 @media (max-width: 670px) {
     .button {
         display: block;

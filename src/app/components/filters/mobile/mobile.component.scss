@@ -22,12 +22,11 @@
     align-items: center;
     width: 170px;
     top: 30px;
-    left: 0;
+    right: -5px;
     z-index: 10;
     &__item {
         border-bottom: 1px dotted #FFF;
         border-right: none;
-        width: 100%;
         padding: 10px;
         color: #FFF;
         &:focus {
