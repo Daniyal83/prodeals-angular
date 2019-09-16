@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
     isShow: Boolean = false;
     isRotate: Boolean = true;
-    constructor() { }
+    constructor(private router: Router) { }
     
     animate() {
         setInterval(() => {
@@ -17,6 +18,10 @@ export class HeaderComponent implements OnInit {
                 this.isRotate = true;                
             }, 500)
         }, 10000)
+    }
+
+    goToMain() {
+        this.router.navigate(['/main']);
     }
 
     ngOnInit() {

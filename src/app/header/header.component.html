@@ -1,7 +1,7 @@
 <div class="header">
     <div class="header__banner">
         <div class="header__logo">
-            <span class="header__logo-images">
+            <span class="header__logo-images" (click)="goToMain()">
                 <img src="../../assets/images/logo-p.png" alt="" class="header__logo-item header__image">
                 <img src="../../assets/images/logo-ro.png" alt="" class="header__logo-item header__image" [ngClass]="{'header_show': isShow, 'header_opacity': !isShow}">
                 <span class="header__logo-item header_translate" [ngClass]="{'header_no-translate': isShow}">
