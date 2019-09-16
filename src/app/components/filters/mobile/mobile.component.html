@@ -1,4 +1,4 @@
-<div class="mobile-filters" (clickOutside)="clickedOutside($event)">
+<div class="mobile-filters" (clickOutside)="clickedOutside()">
     <div class="mobile-filters__button" (click)="toggleFilters()">Фильтры</div>
     <ul class="list" *ngIf="isFiltersOpened" [@slideInOut]>
         <li class="list__item" (click)="toggleCategores()">Категории</li>
