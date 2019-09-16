@@ -13,7 +13,7 @@
         align-self: center;
     }
     &__info {
-        margin: 40px 0;
+        margin: 30px 0;
         background: $light-gray;
         padding: 10px 5px;
         box-sizing: border-box;
@@ -30,6 +30,10 @@
     &__link {
         color: $navi;
         font-weight: bold;
+    }
+    &__button {
+        margin-top: 10px;
+        text-align: center;
     }
 }
 
