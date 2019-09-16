@@ -64,3 +64,31 @@
         transform: rotate(540deg);
     }
 }
+
+@media (max-width: 560px) {
+    .header {
+        &__banner {
+            height: 130px;
+        }
+        &__logo {
+            padding-left: 20px;
+        }
+        &__logo-images {
+            img {
+                width: 70px;
+                &:first-child {
+                    width: 40px;
+                }
+            }
+        }
+        &_translate {
+            transform: translateX(-75px);
+            img:last-child {
+                width: 115px;
+            }
+        }
+        &_no-translate {
+            transform: translateX(0);
+        }
+    }
+}
