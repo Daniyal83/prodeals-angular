@@ -1,0 +1,17 @@
+<div class="mobile-filters" (clickOutside)="clickedOutside($event)">
+    <div class="mobile-filters__button" (click)="toggleFilters()">Фильтры</div>
+    <ul class="list" *ngIf="isFiltersOpened" [@slideInOut]>
+        <li class="list__item" (click)="toggleCategores()">Категории</li>
+            <div class="submenu" *ngIf="isCategories" [@dropInOut]>
+                <ul class="submenu__list">
+                    <li class="submenu__item" *ngFor="let cat of categories" (click)="setCategoryFilter(cat)">{{ cat.rusName }}</li>
+                </ul>
+            </div>
+        <li [ngClass]="{'list__item': true, 'bordered\-top': isCategories}" (click)="toggleBrands()">Брэнды</li>
+            <div class="submenu" *ngIf="isBrands" [@dropInOut]>
+                <ul class="submenu__list">
+                    <li class="submenu__item" *ngFor="let brand of brands"  (click)="setBrandFilter(brand.name)">{{ brand.name }}</li>
+                </ul>
+            </div>
+    </ul>
+</div>

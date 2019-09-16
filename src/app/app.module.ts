@@ -25,6 +25,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { LabelValueComponent } from './components/label-value/label-value.component';
 import { PhoneFeaturesComponent } from './components/product-features/phone-features/phone-features.component';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { MobileComponent } from './components/filters/mobile/mobile.component';
+import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ClickOutsideModule } from 'ng-click-outside';
     CategoriesComponent,
     ProductDetailsComponent,
     LabelValueComponent,
-    PhoneFeaturesComponent
+    PhoneFeaturesComponent,
+    MobileComponent,
+    BurgerMenuComponent
   ],
   imports: [
     BrowserModule,
