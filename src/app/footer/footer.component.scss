@@ -13,5 +13,9 @@
     &__info {
         font-size: 12px;
         margin-top: 10px;
+        text-align: center;
+        @media (max-width: 460px) {
+            font-size: 10px;
+        }
     }
 }
