@@ -24,6 +24,7 @@ import { CategoriesComponent } from './components/filters/categories/categories.
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { LabelValueComponent } from './components/label-value/label-value.component';
 import { PhoneFeaturesComponent } from './components/product-features/phone-features/phone-features.component';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { PhoneFeaturesComponent } from './components/product-features/phone-feat
     FormsModule,
     AppRoutingModule,
     NgxPaginationModule,
+    ClickOutsideModule,
     StoreModule.forRoot({product: reducers.product}),
   ],
   providers: [],
