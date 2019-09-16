@@ -1,14 +1,21 @@
 .navbar {
     width: 100%;
-    &__list {
-        list-style: none;
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        background-color: #595B5E;
-        box-sizing: border-box;
-        margin: 0;
+    background-color: #595B5E;
+    height: 38px;
+    box-sizing: border-box;
+    &_active {
+        color: #109ACA;
     }
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    transition: all 0.3s;
     &__item {
         padding: 5px;
         color: #FFF;
@@ -25,7 +32,77 @@
             color: #109ACA;
         }
     }
-    &_active {
-        color: #109ACA;
+}
+
+.dropped {
+    display: none;
+}
+
+.button {
+    display: none;
+    width: 60px;
+    height: 38px;
+    position: absolute;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+    &__bar {
+        height: 3px;
+        background-color: white;
+        margin-bottom: 10px;
+        width: 100%;
+        transition: all 0.3s;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.opened {
+    .button__bar {
+        &:first-child {
+            transform: rotate(31deg);
+            transform-origin: top left;
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:last-child {
+            transform: rotate(-31deg);
+            transform-origin: top left;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .navbar {
+        position: relative;
+    }
+    .button {
+        display: block;
+    }
+    .list {
+        background-color: #595B5E;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 170px;
+        max-height: 0;
+        top: 38px;
+        left: 0;
+        opacity: 0;
+        &__item {
+            border-bottom: 1px dotted #FFF;
+            border-right: none;
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    .dropped {
+        display: flex;
+        z-index: 100;
+        opacity: 1;
+        max-height: 200px;
     }
 }

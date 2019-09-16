@@ -24,10 +24,16 @@
     flex: 1;
     &__left-block, &__right-block {
         width: 20%;
+        @media (max-width: 670px) {
+            display: none;
+        }
     }
     &__main {
         width: 60%;
         padding: 0 10px;
+        @media (max-width: 670px) {
+            width: 100%;
+        }
     }
 }
 
