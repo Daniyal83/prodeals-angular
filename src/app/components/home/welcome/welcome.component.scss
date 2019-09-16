@@ -14,6 +14,9 @@
         text-indent: 20px;
         line-height: 1.3;
         text-align:justify;
+        @media (max-width: 500px) {
+            text-align: center;
+        }
     }
     &__link {
         color: $navi;
@@ -21,6 +24,11 @@
         transition: all 0.2s;
         &:hover {
             color: $dark-gray;
+        }
+    }
+    &__desktop {
+        @media (max-width: 920px) {
+            display: none;
         }
     }
     &_bold {
