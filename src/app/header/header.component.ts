@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import * as ProductStore from 'app/store';
 
 @Component({
     selector: 'app-header',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
     isShow: Boolean = false;
     isRotate: Boolean = true;
-    constructor(private router: Router) { }
+    constructor(private router: Router, private store: Store<ProductStore.state>) { }
     
     animate() {
         setInterval(() => {
@@ -22,6 +24,7 @@ export class HeaderComponent implements OnInit {
 
     goToMain() {
         this.router.navigate(['/main']);
+        this.store.dispatch(new ProductStore.SetPage(1));
     }
 
     ngOnInit() {

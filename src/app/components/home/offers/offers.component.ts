@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import * as ProductStore from 'app/store';
-import { getProductStateBrandFilter, getProductStateCategoryFilter } from 'app/store';
+import { getProductStateBrandFilter, getProductStateCategoryFilter, getProductStatePage } from 'app/store';
 import { offersAnimation } from 'app/animations';
 import { computed } from 'mobx-angular';
 
@@ -23,7 +23,7 @@ export class OffersComponent implements OnInit {
     products: Phone[] = [];
     brandFilter: Observable<string>;
     categoryFilter: Observable<string>;
-    page = 1;
+    page: Observable<number>;
     
     @computed get isEmpty() {
         return !this.products || !this.products.length;
@@ -33,13 +33,14 @@ export class OffersComponent implements OnInit {
         private productService: ProductService, 
         private store: Store<ProductStore.state>,
         private router: Router,
-        private route: ActivatedRoute) { 
-        this.brandFilter = store.select(getProductStateBrandFilter);
-        this.categoryFilter = store.select(getProductStateCategoryFilter);
+        private route: ActivatedRoute) {
+            this.page = store.select(getProductStatePage);
+            this.brandFilter = store.select(getProductStateBrandFilter);
+            this.categoryFilter = store.select(getProductStateCategoryFilter);
     }
 
     pageChange(event) {
-        this.page = event;
+        this.store.dispatch(new ProductStore.SetPage(event));
         this.scrollToTop(1000);
     }
 

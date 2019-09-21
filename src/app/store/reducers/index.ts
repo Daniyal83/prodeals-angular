@@ -16,3 +16,4 @@ export const getProductStateSearchResult = createSelector(selectProductState, Pr
 export const getProductStateBrandFilter = createSelector(selectProductState, ProductReducer.getBrandFilter);
 export const getProductStateCategoryFilter = createSelector(selectProductState, ProductReducer.getCategoryFilter);
 export const getProductStateChosenProduct = createSelector(selectProductState, ProductReducer.getChosenProduct);
+export const getProductStatePage = createSelector(selectProductState, ProductReducer.getCurrentPage);

@@ -21,6 +21,7 @@ export class BrandsComponent implements OnInit {
             return this.router.navigate([`/main/filtered/${name}`]);
         }
         this.router.navigate(['/main']);
+        this.store.dispatch(new ProductStore.SetPage(1));
     }  
 
     ngOnInit() {

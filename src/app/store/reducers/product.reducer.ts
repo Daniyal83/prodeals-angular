@@ -7,7 +7,8 @@ export interface ProductState {
     searchResult: Phone[],
     brandFilter: string,
     categoryFilter: string,
-    chosenProduct: Phone
+    chosenProduct: Phone,
+    page: number
 }
 
 export const initialState: ProductState = {
@@ -15,7 +16,8 @@ export const initialState: ProductState = {
     searchResult: [],
     brandFilter: '',
     categoryFilter: '',
-    chosenProduct: null
+    chosenProduct: null,
+    page: 1
 } 
 
 export function reducer(state = initialState, action: ProductActions.ProductActions): ProductState {
@@ -36,6 +38,8 @@ export function reducer(state = initialState, action: ProductActions.ProductActi
             return {...state, categoryFilter}
         case ProductActions.SET_PRODUCT_DETAILS:
             return {...state, chosenProduct: action.payload}
+        case ProductActions.SET_PAGE:
+            return {...state, page: action.payload}
         default:
             return state;
     }
@@ -46,4 +50,5 @@ export const getSearchResult = (state: ProductState) => state.searchResult;
 export const getBrandFilter = (state: ProductState) => state.brandFilter;
 export const getCategoryFilter = (state: ProductState) => state.categoryFilter;
 export const getChosenProduct = (state: ProductState) => state.chosenProduct;
+export const getCurrentPage = (state: ProductState) => state.page;
 

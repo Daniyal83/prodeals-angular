@@ -1,6 +1,6 @@
 <div class="offers" [@fadeIn]="isReady ? 'show' : 'hide'">
     <div class="offers__products">
-        <div class="offers__item" *ngFor="let product of products | paginate: { itemsPerPage: 9, currentPage: page }">
+        <div class="offers__item" *ngFor="let product of products | paginate: { itemsPerPage: 9, currentPage: page | async}">
             <app-product [product]="product"></app-product>
             <div class="offers__buttons">
                 <app-button [buttonValue]="'О товаре'" (clicked)="showDetails($event, product)"></app-button>

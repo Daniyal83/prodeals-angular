@@ -88,6 +88,7 @@ export class MobileComponent implements OnInit {
             return this.router.navigate([`/main/filtered/${category.name}`]);
         }
         this.router.navigate(['/main']);
+        this.store.dispatch(new ProductStore.SetPage(1));
     }
 
     setBrandFilter(name: string) {
@@ -98,6 +99,7 @@ export class MobileComponent implements OnInit {
             return this.router.navigate([`/main/filtered/${name}`]);
         }
         this.router.navigate(['/main']);
+        this.store.dispatch(new ProductStore.SetPage(1));
     }
 
     ngOnInit() {

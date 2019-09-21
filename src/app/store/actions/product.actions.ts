@@ -7,6 +7,7 @@ export const SEARCH_PRODUCT = '[Product] Search'
 export const SET_BRANDFILTER = 'Set brand filter'
 export const SET_CATEGORYFILTER = 'Set category filter'
 export const SET_PRODUCT_DETAILS = '[Product] Set details'
+export const SET_PAGE = 'Set page fo offers'
 
 export class AddProduct implements Action {
     readonly type = ADD_PRODUCT
@@ -38,4 +39,9 @@ export class SetProductDetails implements Action {
     constructor(public payload: Phone) {}
 }
 
-export type ProductActions = AddProduct | SearchProduct | RemoveProduct | SetBrandFilter | SetCategoryFilter | SetProductDetails
+export class SetPage implements Action {
+    readonly type = SET_PAGE
+    constructor(public payload: number) {}
+}
+
+export type ProductActions = AddProduct | SearchProduct | RemoveProduct | SetBrandFilter | SetCategoryFilter | SetProductDetails | SetPage

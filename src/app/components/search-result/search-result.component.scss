@@ -5,6 +5,10 @@
     &__title {
         margin-bottom: 20px;
     }
+    &__list {
+        max-height: 600px;
+        overflow-y: auto;
+    }
     &__item {
         margin-bottom: 10px;
     }
