@@ -32,7 +32,7 @@ export class ProductDetailsComponent implements OnInit {
     }
 
     goToStore(href) {
-        window.location.href = href;
+        window.open(href, '_blank');
     }
 
     ngOnInit() {

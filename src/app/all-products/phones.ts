@@ -23,7 +23,7 @@ export const PHONES: Phone[] = [
         networks: "2G/3G/4G, WiFi, Bluetooth 5.0, GPS, GLONASS",
         lte: "FDD-LTE B1/2/3/4/5/7/8/20/28",
         features: "USB Type-C, Сканер отпечатка, Радио, ИК порт, Quick Charge 4",
-        href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F33060158380.html%3Fspm%3Da2g0o.productlist.0.0.40407d41aJekSs%26algo_pvid%3Db4630f4d-551c-4c2f-919f-7e137af61e68%26algo_expid%3Db4630f4d-551c-4c2f-919f-7e137af61e68-1%26btsid%3D2e2e48fe-f32a-4e1f-9a3c-dc69a017c918%26ws_ab_test%3Dsearchweb0_0%2Csearchweb201602_7%2Csearchweb201603_52&subid=redmiNote7",
+        href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32978723361.html%3Fspm%3Da2g0o.productlist.0.0.71814dbcUc88iF%26algo_pvid%3D6714b562-82d8-41bc-834d-499fc82e6b57%26algo_expid%3D6714b562-82d8-41bc-834d-499fc82e6b57-1%26btsid%3D768bff60-bacb-481e-ac3f-ad5a0034c5cc%26ws_ab_test%3Dsearchweb0_0%2Csearchweb201602_7%2Csearchweb201603_52&subid=redmiNote7-4-64",
         isDiscount: false,
         additional: "Китайская версия с официальной прошивкой Global (поддерживает OTA-обновления)"
     },

@@ -110,7 +110,7 @@ export class OffersComponent implements OnInit {
     }
 
     goToStore(value: string, product: Phone) {
-        window.location.href = product.href;
+        window.open(product.href, '_blank');
     }
 
     ngOnInit() {
