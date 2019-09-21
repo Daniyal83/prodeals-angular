@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations';
+import { Store } from '@ngrx/store';
+import * as ProductStore from 'app/store';
 
 @Component({
     selector: 'app-burger-menu',
@@ -20,7 +22,11 @@ import { trigger, transition, animate, style } from '@angular/animations';
 export class BurgerMenuComponent implements OnInit {
     isMenuOpened: Boolean = false
 
-    constructor() { }
+    constructor(private store: Store<ProductStore.state>) { }
+
+    setDefaultPage() {
+        this.store.dispatch(new ProductStore.SetPage(1));
+    }
 
     toggleMenu() {
         this.isMenuOpened = !this.isMenuOpened;
