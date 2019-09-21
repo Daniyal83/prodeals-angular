@@ -1,18 +1,18 @@
 import * as ProductActions from '../actions/product.actions';
-import { PRODUCTS } from '../../all-products/products';
+import { allProducts } from '../../all-products/products';
 import { Phone } from '../../models/Phone';
 
 export interface ProductState {
-    products: Phone[],
+    products: any,
     searchResult: Phone[],
     brandFilter: string,
     categoryFilter: string,
-    chosenProduct: Phone,
+    chosenProduct: any,
     page: number
 }
 
 export const initialState: ProductState = {
-    products: PRODUCTS,
+    products: allProducts,
     searchResult: [],
     brandFilter: '',
     categoryFilter: '',

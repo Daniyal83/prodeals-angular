@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PRODUCTS } from '../all-products/products';
-import { Phone } from '../models/Phone';
+import { allProducts } from '../all-products/products';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +8,12 @@ export class ProductService {
 
   constructor() { }
 
-  getProducts(): Phone[] {
-    return PRODUCTS;
+  getProducts() {
+    return allProducts;
   }
 
   getProductByTitle(title) {
-    return PRODUCTS.find(item => item.title.replace(/[\/ ]/g, "_") === title);
+    return allProducts.find(item => item.title.replace(/[\/ ]/g, "_") === title);
   }
 
 }

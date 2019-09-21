@@ -36,7 +36,7 @@ export class SetCategoryFilter implements Action {
 
 export class SetProductDetails implements Action {
     readonly type = SET_PRODUCT_DETAILS
-    constructor(public payload: Phone) {}
+    constructor(public payload: any) {}
 }
 
 export class SetPage implements Action {

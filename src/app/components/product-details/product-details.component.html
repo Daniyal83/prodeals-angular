@@ -5,9 +5,10 @@
         <app-button buttonValue="В магазин =>" (clicked)="goToStore(product.href)" class="details__button"></app-button>
         <div class="details__info">
             <app-phone-features *ngIf="product.category === 'phones'" [phone]="product"></app-phone-features>
+            <app-projector *ngIf="product.category === 'projectors'" [projector]="product"></app-projector>
         </div>
         <div class="details__message">
-            <span *ngIf="product.isDiscount">Этот товар вы можете купить со скидкой или получить бесплатный подарок.</span> Читайте 
+            <span *ngIf="product.isDiscount">Цена указана с учётом нашей скидки. Как её получить => </span> Читайте 
             <a class="details__link" routerLink="/instructions">инструкцию</a>.
         </div>
     </div>

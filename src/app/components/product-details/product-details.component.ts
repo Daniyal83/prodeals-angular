@@ -15,8 +15,8 @@ import { getProductStateChosenProduct } from 'app/store';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-    $product: Observable<Phone>
-    products: Phone[] = [];
+    $product: Observable<any>
+    products = [];
 
     constructor(
         private store: Store<ProductStore.state>, 
@@ -24,11 +24,6 @@ export class ProductDetailsComponent implements OnInit {
         private productService: ProductService,
         private renderer2: Renderer2, @Inject(DOCUMENT) private _document) { 
         this.$product = store.select(getProductStateChosenProduct)
-    }
-
-    isInfo(key: string) {
-        const noInfoKeys = ["brand", "title", "href", "category", "rusCategory", "special", "photo", "isDiscount"];
-        return noInfoKeys.indexOf(key) === -1;
     }
 
     goToStore(href) {

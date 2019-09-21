@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
-import { Phone } from 'app/models/Phone';
 
 @Component({
   selector: 'app-special',
@@ -8,8 +7,8 @@ import { Phone } from 'app/models/Phone';
   styleUrls: ['./special.component.scss']
 })
 export class SpecialComponent implements OnInit {
-  products: Phone[];
-  specialProduct: Phone;
+  products = [];
+  specialProduct: any;
 
   constructor(private productService: ProductService) { }
 

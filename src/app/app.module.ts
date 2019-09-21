@@ -27,6 +27,7 @@ import { PhoneFeaturesComponent } from './components/product-features/phone-feat
 import { ClickOutsideModule } from 'ng-click-outside';
 import { MobileComponent } from './components/filters/mobile/mobile.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
+import { ProjectorComponent } from './components/product-features/projector/projector.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { BurgerMenuComponent } from './components/burger-menu/burger-menu.compon
     LabelValueComponent,
     PhoneFeaturesComponent,
     MobileComponent,
-    BurgerMenuComponent
+    BurgerMenuComponent,
+    ProjectorComponent
   ],
   imports: [
     BrowserModule,

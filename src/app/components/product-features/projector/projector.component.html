@@ -1,0 +1,20 @@
+<div class="projector-features">
+    <ul class="list">
+        <li class="list__item"><span class="list__item-label">Цена:</span> <span class="list__item-value">{{ projector.price }} $</span></li>
+        <li class="list__item"><span class="list__item-label">Цвета:</span> <span class="list__item-value">{{ projector.colors }}</span></li>
+        <li class="list__item"><span class="list__item-label">Яркость:</span> <span class="list__item-value">{{ projector.brightness }}</span></li>
+        <li class="list__item"><span class="list__item-label">Контрастность:</span> <span class="list__item-value">{{ projector.contrast }}</span></li>
+        <li class="list__item"><span class="list__item-label">Технология проецирования:</span> <span class="list__item-value">{{ projector.projection }}</span></li>
+        <li class="list__item"><span class="list__item-label">Оптическое разрешение:</span> <span class="list__item-value">{{ projector.resolution }}</span></li>
+        <li class="list__item"><span class="list__item-label">Интерфейсы:</span> <span class="list__item-value">{{ projector.interfaces }}</span></li>
+        <li class="list__item"><span class="list__item-label">Размер проекции:</span> <span class="list__item-value">{{ projector.size }}</span></li>
+        <li class="list__item"><span class="list__item-label">Проекционное расстояние:</span> <span class="list__item-value">{{ projector.distance }}</span></li>
+        <li class="list__item"><span class="list__item-label">Размеры:</span> <span class="list__item-value">{{ projector.dimensions }}</span></li>
+        <li class="list__item"><span class="list__item-label">Вес:</span> <span class="list__item-value">{{ projector.weight }}</span></li>
+        <li *ngFor="let item of projector.other | keyvalue" class="list__item"><span class="list__item-label">{{ item.key }}:</span> <span class="list__item-value">{{ item.value }}</span></li>
+        <li *ngIf="projector.additional" class="list__item"><span class="list__item-label">Дополнительно:</span> <span class="list__item-value">{{ projector.additional }}</span></li>
+    </ul>
+    <div class="info">
+        {{ projector.features}}
+    </div>
+</div>
