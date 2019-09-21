@@ -2,11 +2,11 @@ import { Phone } from '../models/Phone';
 
 export const PHONES: Phone[] = [
     {
-        title: "Xiaomi Redmi Note 7 3/32",
+        title: "Xiaomi Redmi Note 7 4/64",
         category: "phones",
         rusCategory: "смартфоны",
         brand: "xiaomi",
-        price: "от 143.37",
+        price: "от 145.73",
         battery: "4000 mAh",
         cameras: "Фронтальная - 13Мп, Основная - 48Мп + 5Мп",
         dimensions: "159.2 x 75.2 x 8.1 мм",
@@ -14,8 +14,8 @@ export const PHONES: Phone[] = [
         colors: "Blue, Black",
         photo: "../../assets/images/phones/redmiNote7.jpg",
         special: false,
-        ram: "3GB",
-        rom: "32GB",
+        ram: "4GB",
+        rom: "64GB",
         processor: "8-ядерный Qualcomm Snapdragon 660 до 2,2 ГГц",
         display: "6.3 IPS с разрешением FHD+, Gorilla Glass 5",
         os: "Андроид 9.0 - MIUI 10",
@@ -24,7 +24,8 @@ export const PHONES: Phone[] = [
         lte: "FDD-LTE B1/2/3/4/5/7/8/20/28",
         features: "USB Type-C, Сканер отпечатка, Радио, ИК порт, Quick Charge 4",
         href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F33060158380.html%3Fspm%3Da2g0o.productlist.0.0.40407d41aJekSs%26algo_pvid%3Db4630f4d-551c-4c2f-919f-7e137af61e68%26algo_expid%3Db4630f4d-551c-4c2f-919f-7e137af61e68-1%26btsid%3D2e2e48fe-f32a-4e1f-9a3c-dc69a017c918%26ws_ab_test%3Dsearchweb0_0%2Csearchweb201602_7%2Csearchweb201603_52&subid=redmiNote7",
-        isDiscount: false
+        isDiscount: false,
+        additional: "Китайская версия с официальной прошивкой Global (поддерживает OTA-обновления)"
     },
     {
         title: "Xiaomi Redmi Note 7 6/64",

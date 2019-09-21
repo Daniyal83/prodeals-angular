@@ -15,5 +15,6 @@
         <li class="list__item"><span class="list__item-label">Особенности:</span> <span class="list__item-value">{{ phone.features }}</span></li>
         <li class="list__item"><span class="list__item-label">Размеры:</span> <span class="list__item-value">{{ phone.dimensions }}</span></li>
         <li class="list__item"><span class="list__item-label">Вес:</span> <span class="list__item-value">{{ phone.weight }}</span></li>
+        <li *ngIf="phone.additional" class="list__item"><span class="list__item-label">Дополнительно:</span> <span class="list__item-value">{{ phone.additional }}</span></li>
     </ul>
 </div>

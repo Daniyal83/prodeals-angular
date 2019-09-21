@@ -23,4 +23,5 @@ export interface Phone {
     features?: string;
     href?: string;
     isDiscount?: boolean;
+    additional?: string
 }

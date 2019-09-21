@@ -9,6 +9,9 @@
         &:last-child {
             margin-bottom: 0;
         }
+        @media (max-width: 450px) {
+            font-size: 14px;
+        }
     }
     &__item-label {
         color: $gray;
