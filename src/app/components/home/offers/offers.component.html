@@ -16,5 +16,5 @@
             </span>
         </div>
     </div>
-    <pagination-controls *ngIf="!isEmpty" class="offers__page-control" (pageChange)="page = $event" previousLabel="Prev"></pagination-controls>
+    <pagination-controls *ngIf="!isEmpty" class="offers__page-control" (pageChange)="pageChange($event)" previousLabel="Prev"></pagination-controls>
 </div>
