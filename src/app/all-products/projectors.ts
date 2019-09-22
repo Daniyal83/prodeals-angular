@@ -139,5 +139,32 @@ export const PROJECTORS: Projector[] = [
         isDiscount: true,
         description: "Карманный проектор Everycom D017 — DLP проектор с уникальным дизайном и встроенным аккумулятором 3600 мАч, настоящий переносной развлекательный центр!",
         additional: "Отправка из России (от 206$), Китая(от 207$)"
-    }
+    },
+    {
+        category: "projectors",
+        rusCategory: "проекторы",
+        brand: "touyinger",
+        title: "TouYinger G4",
+        price: "от 340",
+        photo: "../../assets/images/projectors/g4.png",
+        colors: "White",
+        brightness: "400 ANSI люмен",
+        contrast: "4000:1",
+        projection: "DLP",
+        resolution: "1280×720, максимальное: 4К",
+        interfaces: "HDMI/2xUSB/TF/3.5 Audio",
+        distance: "0.5-5.5 м",
+        size: "16-200″",
+        dimensions: "173×40 мм",
+        weight: "0.75 кг",
+        other: {
+            "Коррекция трапецеидальных искажений": "по вертикали ±40°",
+            "Срок службы лампы": "30000 ч",
+            "Поддержка Android": "Android 6.0.1, 2Gb RAM, процессор RK3368"
+        },
+        href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32822374110.html%3Falbbt%3D1%26isdl%3Dy%26aff_short_key%3DuNb6i2f%26aff_platform%3Dtrue%26albslr%3D120937648%26src%3DVK%26tag1%3DDaniel%26tag2%3DG4&subid=g4-projector",
+        isDiscount: true,
+        description: "TouYinger G4. Компактный DLP проектор с уникальным дизайном, высоким уровнем яркости 400 ANSI люмен, оптическим разрешением 1280×720 и встроенным аккумулятором 12000 mAh! Обновленная версия декабрь 2018 года!",
+        additional: "Без батареи - от 340$ (РФ), от 345$(Китай), с батареей - от 355$ (РФ), от 360$(Китай)"
+    },
 ]

@@ -6,6 +6,7 @@ export interface Projector {
     title: string;
     photo: string;
     price?: any;
+    special?: boolean;
     colors?: string;
     brightness?: string;
     contrast?: string,

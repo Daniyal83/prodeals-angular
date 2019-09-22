@@ -18,9 +18,10 @@ export class BrandsComponent implements OnInit {
         this.store.dispatch(new ProductStore.SetCategoryFilter(""));
         this.store.dispatch(new ProductStore.SetBrandFilter(name));
         if(name !== 'Все') {
-            return this.router.navigate([`/main/filtered/${name}`]);
+            this.router.navigate([`/main/filtered/${name}`]);
+        } else {
+            this.router.navigate(['/main']);
         }
-        this.router.navigate(['/main']);
         this.store.dispatch(new ProductStore.SetPage(1));
     }  
 

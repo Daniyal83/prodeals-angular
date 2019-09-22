@@ -1,8 +1,17 @@
 .right-block {
-    &__banner {
+    &__top-banner {
+        @media (max-width: 960px) {
+            display: none;
+        }
+    }
+    &__bottom-banner {
         margin-top: 10px;
+        text-align: center;
         @media (max-width: 1240px) {
             display: none;
         }
+    }
+    &__image {
+        width: 100%;
     }
 }

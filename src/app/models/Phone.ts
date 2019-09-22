@@ -11,7 +11,7 @@ export interface Phone {
     dimensions?: string,
     weight?: string;
     photo: string;
-    special: boolean;
+    special?: boolean;
     ram?: string;
     rom?: string;
     processor?: string;
