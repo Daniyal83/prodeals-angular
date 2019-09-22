@@ -33,7 +33,7 @@ export class BrandsComponent implements OnInit {
         {id: 4, name: "OnePlus"},
         {id: 5, name: "Huawei"},
         {id: 6, name: "Honor"},
-        {id: 7, name: "Asus"},
+        {id: 7, name: "Everycom"},
         {id: 8, name: "TouYinger"},
         ]
     }

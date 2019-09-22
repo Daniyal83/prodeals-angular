@@ -17,7 +17,7 @@ export interface Projector {
     dimensions?: string;
     weight?: string;
     other?: object;
-    features?: string;
+    description?: string;
     href?: string;
     isDiscount?: boolean;
     additional?: string

@@ -25,7 +25,7 @@ export const PROJECTORS: Projector[] = [
         },
         href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32904222119.html%3Falbbt%3D1%26isdl%3Dy%26aff_short_key%3DuNb6i2f%26aff_platform%3Dtrue%26albslr%3D120937648%26src%3DVK%26tag1%3DDaniel%26tag2%3DX20&subid=x20Projector",
         isDiscount: true,
-        features: "TouYinger X20. Доступный проектор с выдающимися характеристиками, лучший выбор среди бюджетный проекторов! Увеличенный уровень яркости и цветовой гаммы, встроенная крышка объектива для защиты линзы от пыли и случайных повреждений!",
+        description: "TouYinger X20. Доступный проектор с выдающимися характеристиками, лучший выбор среди бюджетных проекторов! Увеличенный уровень яркости и цветовой гаммы, встроенная крышка объектива для защиты линзы от пыли и случайных повреждений!",
         additional: "Отправка из России (от 71$), Китая (от 75$)"
     },
     {
@@ -52,7 +52,7 @@ export const PROJECTORS: Projector[] = [
         },
         href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32885196164.html%3Falbbt%3D1%26isdl%3Dy%26aff_short_key%3DuNb6i2f%26aff_platform%3Dtrue%26albslr%3D120937648%26src%3DVK%26tag1%3DDaniel%26tag2%3DT4mini&subid=t4MiniProjector",
         isDiscount: true,
-        features: "TouYinger T4 mini. LCD проектор c LTPS матрицей и оптическим разрешением 1280×720! Увеличенный спектр цветовой гаммы на 75% относительно других LCD проекторов, позволяет вывести качественную картинку на экран до 150 дюймов. Модификация T4 mini WM с поддержкой проводного зеркалирования.",
+        description: "TouYinger T4 mini. LCD проектор c LTPS матрицей и оптическим разрешением 1280×720! Увеличенный спектр цветовой гаммы на 75% относительно других LCD проекторов, позволяет вывести качественную картинку на экран до 150 дюймов. Модификация T4 mini WM с поддержкой проводного зеркалирования.",
         additional: "Отправка из России или Китая"
     },
     {
@@ -79,7 +79,65 @@ export const PROJECTORS: Projector[] = [
         },
         href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32842506376.html%3Falbbt%3D1%26isdl%3Dy%26aff_short_key%3DuNb6i2f%26aff_platform%3Dtrue%26albslr%3D120937648%26src%3DVK%26tag1%3DDaniel%26tag2%3DT26K&subid=t26-l-k-Projector",
         isDiscount: true,
-        features: "TouYinger T4 mini. LCD проектор c LTPS матрицей и оптическим разрешением 1280×720! Увеличенный спектр цветовой гаммы на 75% относительно других LCD проекторов, позволяет вывести качественную картинку на экран до 150 дюймов. Модификация T4 mini WM с поддержкой проводного зеркалирования.",
+        description: "TouYinger T26L/K. Первый LCD проектор с оптическим разрешением 1920×1080 и LTPS матрицей! Позволяет вывести качественную картинку на экран до 200 дюймов. Обновленная версия T26K с поддержкой автоматической коррекции трапецеидальных искажений.",
         additional: "Отправка из России (от 180$), Китая(от 185$)"
+    },
+    {
+        category: "projectors",
+        rusCategory: "проекторы",
+        brand: "everycom",
+        title: "Everycom D019",
+        price: "от 174",
+        photo: "../../assets/images/projectors/everycom-d019.png",
+        colors: "Black, Silver",
+        brightness: "1000 люмен",
+        contrast: "2000:1",
+        projection: "DLP 0.3″ DMD + RGBLED",
+        resolution: "854×480, максимальное: 1920×1080",
+        interfaces: "USB/Audio 3.5мм",
+        distance: "1-5м",
+        size: "30-120″",
+        dimensions: "60x60x58 мм",
+        weight: "0.205 кг",
+        other: {
+            "Объектив": "F = 126 мм, ручная фокусировка",
+            "Коррекция геометрических искажений": "автоматическая по вертикали ±40°",
+            "Срок службы лампы": "20000 — 50000 ч",
+            "Поддержка Android": "Android 7.1.2, процессор RK3128 Cortex-A7 4-ядерный 1.2 ГГц, RAM: 2Gb, ROM: 16Gb",
+            "Встроенный аккумулятор": "3400 мАч (около 2 часов использования)"
+        },
+        href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32998299535.html%3Falbbt%3D1%26isdl%3Dy%26aff_short_key%3DuNb6i2f%26aff_platform%3Dtrue%26albslr%3D228527606%26src%3DVK%26tag1%3DDaniel%26tag2%3DD019&subid=everycom-d019",
+        isDiscount: true,
+        description: "Карманный проектор Everycom D019 — уникальное устройство — куб, размером всего 6 см, настоящий переносной развлекательный центр! Позволяет вывести качественную картинку размером до 100″!",
+        additional: "Отправка из России (от 174$), Китая(от 175$)"
+    },
+    {
+        category: "projectors",
+        rusCategory: "проекторы",
+        brand: "everycom",
+        title: "Everycom D017",
+        price: "от 206",
+        photo: "../../assets/images/projectors/everycom-d017.png",
+        colors: "Gray, Red",
+        brightness: "2000 люмен",
+        contrast: "2000:1",
+        projection: "DLP 0.3″ DMD + RGBLED",
+        resolution: "854×480, максимальное: 4K",
+        interfaces: "HDMI/USB 2.0/USB 3.0/Audio 3.5мм/Карты памяти TF",
+        distance: "1-5м",
+        size: "30-120″",
+        dimensions: "115×15 мм",
+        weight: "0.250 кг",
+        other: {
+            "Объектив": "F = 126 мм, ручная фокусировка",
+            "Коррекция геометрических искажений": "автоматическая по вертикали ±40°",
+            "Срок службы лампы": "20000 — 50000 ч",
+            "Поддержка Android": "Android 7.1.2, процессор RK3328 Cortex-A53 4-х ядерный 1.5 ГГц, RAM: 2Gb, ROM: 16Gb",
+            "Встроенный аккумулятор": "3600 мАч (около 2 часов использования)"
+        },
+        href: "https://alitems.com/g/1e8d11449443619d746e16525dc3e8/?ulp=https%3A%2F%2Fru.aliexpress.com%2Fitem%2F32976155546.html%3Falbbt%3D1%26isdl%3Dy%26aff_short_key%3DuNb6i2f%26aff_platform%3Dtrue%26albslr%3D228527606%26src%3DVK%26tag1%3DDaniel%26tag2%3DD017&subid=everycom-d017",
+        isDiscount: true,
+        description: "Карманный проектор Everycom D017 — DLP проектор с уникальным дизайном и встроенным аккумулятором 3600 мАч, настоящий переносной развлекательный центр!",
+        additional: "Отправка из России (от 206$), Китая(от 207$)"
     }
 ]
