@@ -13,4 +13,7 @@ function merge(arrays) {
     return output;
 }
 
-export const allProducts = merge([PHONES, PROJECTORS]);
+export const allProducts = merge([
+    PHONES.sort((a, b) => 0.5 - Math.random()), 
+    PROJECTORS.sort((a, b) => 0.5 - Math.random())
+]);
