@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Phone } from 'app/models/Phone';
 import { ProductService } from '../../services/product.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { ActivatedRoute } from '@angular/router'
 import { Renderer2, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import * as ProductStore from 'app/store';
 import { getProductStateChosenProduct } from 'app/store';
 
