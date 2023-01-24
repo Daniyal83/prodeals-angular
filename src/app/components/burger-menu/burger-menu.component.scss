@@ -9,11 +9,14 @@
     &__item {
         border-bottom: 1px dotted #FFF;
         border-right: none;
-        width: 100%;
+        max-width: 100%;
         padding: 10px;
         color: #FFF;
         &:focus {
             outline: 0;
+        }
+        &:last-child {
+            border-bottom: none;
         }
     }
 }
