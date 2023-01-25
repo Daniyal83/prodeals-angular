@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "prodeals"
+  "defaultProject": "prodeals",
+  "cli": {
+    "analytics": false
+  }
 }
